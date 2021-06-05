@@ -1,4 +1,5 @@
 import "./App.css";
+import "./component/Themes";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Main from "./component/MainComponent";
 import { BrowserRouter } from "react-router-dom";

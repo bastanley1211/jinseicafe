@@ -1,6 +1,7 @@
 import React from "react";
-import { userPhotoFrame } from "./Style";
+import { userPhotoFrame, profileWrapper } from "./Style";
 import { Media, Button } from "reactstrap";
+import { baseUrl } from "../shared/baseUrl";
 
 function RenderUser({ user }) {
   if (user) {
@@ -8,7 +9,11 @@ function RenderUser({ user }) {
       <>
         <div className="row align-items-end">
           <div className="col-5">
-            <img src={user.photo} style={userPhotoFrame} />
+            <img
+              src={user.photo}
+              style={userPhotoFrame}
+              alt="random user uploaded"
+            />
           </div>
           <div className="col ml-2 text-center my-auto">
             <h2>
@@ -32,11 +37,10 @@ function RenderUser({ user }) {
               <h5>Post Streak:</h5>
             </div>
             <div className="col-8">{user.postStreak} days</div>
-            <div className="col-4">
-              <h5>Friends:</h5>
-            </div>
-            <div className="col-8">{user.friends}</div>
-            <Button className="mx-auto mt-2">Update Profile</Button>
+
+            <Button className="mx-auto mt-2" style={{ marginBottom: "60px" }}>
+              Update Profile
+            </Button>
           </div>
         </div>
       </>
@@ -52,7 +56,11 @@ function UserInfo(props) {
       </Media>
     );
   });
-  return <div className="container-fluid p-4 mx-auto">{userProfile}</div>;
+  return (
+    <div className="container-fluid p-4 mx-auto" style={profileWrapper}>
+      {userProfile}
+    </div>
+  );
 }
 
 export default UserInfo;

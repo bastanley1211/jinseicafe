@@ -2,7 +2,7 @@ export const PROMPTS = [
   {
     id: 1,
     promptQ:
-      "What is one thing that you are grateful for today? Write 3-5 sentences about WHAT and WHY you are grateful for it.",
+      "What is one thing that you are grateful for today?\nWrite 3-5 sentences about WHAT and WHY you are grateful for it.",
     postHeading: "A gratitude post by",
   },
   {

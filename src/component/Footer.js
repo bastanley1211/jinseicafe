@@ -10,21 +10,23 @@ function RenderUserData() {
 const userStreak = USER.map((user) => `${user.postStreak}`);
 
 class Footer extends React.Component {
-  render(props) {
+  render() {
     return (
-      <div className="appFooter container-fluid" style={footer}>
+      <div className="container-fluid" style={footer}>
         <Navbar>
           <a className="nav-link" href="/profile">
             <i className="fa fa-user-circle fa-lg" />
-            {RenderUserData()}
+            <span className="d-none d-md-inline"> {RenderUserData()}</span>
           </a>
-          <span className="m-2">
-            <i className="fa fa-pencil fa-lg" />{" "}
-            <span style={{ textDecoration: "underline" }}>{userStreak}</span>{" "}
+          <a className="nav-link m-2 d-none d-md-block" href="/archive">
+            <i className="fa fa-pencil fa-lg" />
+            <span style={{ textDecoration: "underline" }}>
+              {userStreak}
+            </span>{" "}
             days
-          </span>
-          <a className="nav-link mx-auto" href="/settings">
-            <i className="fa fa-cog fa-lg" /> Settings
+          </a>
+          <a className="nav-link ml-auto" href="/settings">
+            <i className="fa fa-cog fa-lg" />
           </a>
         </Navbar>
       </div>

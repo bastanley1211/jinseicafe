@@ -6,11 +6,6 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
 } from "reactstrap";
 import { navbar } from "./Style";
 import { NavLink } from "react-router-dom";
@@ -54,8 +49,13 @@ class Header extends React.Component {
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link" to="/friends">
-                    <i className="fa fa-user fa-lg" /> Friends
+                  <NavLink className="nav-link" to="/archive">
+                    <i className="fa fa-user fa-lg" /> Archive
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink className="nav-link" to="/settings">
+                    <i className="fa fa-cog fa-lg" /> Settings
                   </NavLink>
                 </NavItem>
               </Nav>

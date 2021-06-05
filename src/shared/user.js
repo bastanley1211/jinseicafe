@@ -8,6 +8,6 @@ export const USER = [
     password: "***********",
     friends: 24,
     photo: "../../images/userPhoto.JPG",
-    postStreak: 100,
+    postStreak: 5,
   },
 ];

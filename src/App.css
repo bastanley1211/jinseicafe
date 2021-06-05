@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+/* whole document */
+
 /* Typography */
 h1 {
   font-family: "KoHo", sans-serif;
@@ -35,12 +37,22 @@ a:hover,
   color: grey;
 }
 
-#friendListLink {
-  color: black;
+.page-enter {
+  opacity: 0;
 }
 
-#friendListLink:hover {
-  opacity: 0.6;
-  background-color: rgba(128, 128, 128, 0.1);
-  text-decoration: none;
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(-100%);
+  transition: 400ms ease-out;
+}
+
+.page-exit {
+  opacity: 1;
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(0%);
+  transition: 400ms ease-in;
 }
